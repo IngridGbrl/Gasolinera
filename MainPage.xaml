@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gasolinera.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="gasolinera.png" HeightRequest="200" HorizontalOptions="Center" />
+
+            <Label Text="Cantidad de galones surtidos" FontSize="17" HorizontalOptions="Center" TextColor="DarkViolet"
+                   FontAttributes="Bold" FontFamily="Constantia"/>
+            <Entry x:Name="galones" Placeholder="Digite aqui la cantidad de galones" Keyboard="Numeric" 
+                   HorizontalOptions="Center" TextColor="MediumPurple"/>
+
+            <Label Text="Precio a cobrar por litros" FontSize="17" HorizontalOptions="Center" TextColor="DarkViolet" 
+                   FontAttributes="Bold" FontFamily="Constantia"/>
+            <Entry x:Name="precioL" IsEnabled="False" Placeholder="0" TextColor="MediumPurple"  
+                   HorizontalOptions="Center"/>
+
+            <Button
+                x:Name="Calcular"
+                Text="Calcular Precio"
+                Clicked="Calcular_Clicked"
+                HorizontalOptions="Center" WidthRequest="180" HeightRequest="70"
+                BackgroundColor="MediumPurple" TextColor="FloralWhite" FontSize="20" FontAttributes="Bold"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
